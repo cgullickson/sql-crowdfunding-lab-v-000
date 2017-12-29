@@ -13,7 +13,7 @@ FROM projects
 INNER JOIN pledges
 ON projects.id = pledges.project_id
 ORDER BY projects.title
-DESC
+DESC;
 "
 end
 
