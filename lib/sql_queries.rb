@@ -26,7 +26,7 @@ ORDER BY users.name"
 end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
-"SELECT title, SUM(pledges.amount - projects.funding_goal) as over_funded
+"SELECT title, (SUM(pledges.amount) - projects.funding_goal) as over_funded
 FROM projects
 INNER JOIN pledges
 ON projects.id = pledges.project_id
